@@ -90,7 +90,7 @@ p {
 @media (max-width:1279px) and (min-width:720px){/*For mid res device*/
 	/*this is the fuckin' black div in the center!*/
 .maindiv {
-	width: 60%;
+	width: 600px;
 	height: 400px;
 	border-top: 2px solid rgba(0,0,0,0.1);
 	border-left: 2px solid rgba(0,0,0,0.1);
