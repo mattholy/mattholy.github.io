@@ -20,7 +20,39 @@
 }
 .wel {
 	text-align:center;
-	font-size:36px;
+	font-size:46px;
 	color:rgba(255,255,255,0.9);
 	font-family:Source Code Pro;
 }
+.learn_more {
+  border-radius: 50px;
+  background: transparent;
+  padding: 10px 50px;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  font-family:"Source Code Pro ExtraLight";
+  width:150px;
+  -webkit-transition-property: background,color;
+          transition-property: background,color;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+.learn_more:focus {
+  box-shadow: none;
+  outline: none;
+}
+.learn_more:hover {
+	background:#ffffff;
+	color:#000000;
+	cursor: pointer;
+	-webkit-transition-property: background,color;
+          transition-property: background,color;
+  -webkit-transition-duration: .4s;
+          transition-duration: .4s;
+}
+
