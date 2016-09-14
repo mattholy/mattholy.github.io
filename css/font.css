@@ -3,7 +3,7 @@
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
-    src: url('EOT/SourceCodePro-ExtraLight.eot') format('embedded-opentype'),
+    src: url('font/SourceCodePro-ExtraLight.eot') format('embedded-opentype'),
          url('font/SourceCodePro-ExtraLight.ttf.woff2') format('woff2'),
          url('font/SourceCodePro-ExtraLight.otf.woff') format('woff'),
          url('font/SourceCodePro-ExtraLight.otf') format('opentype'),
