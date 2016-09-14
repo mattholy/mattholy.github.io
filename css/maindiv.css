@@ -90,7 +90,7 @@ p {
 @media (max-width:1279px) and (min-width:720px){/*For mid res device*/
 	/*this is the fuckin' black div in the center!*/
 .maindiv {
-	width: 600px;
+	width: 60%;
 	height: 400px;
 	border-top: 2px solid rgba(0,0,0,0.1);
 	border-left: 2px solid rgba(0,0,0,0.1);
@@ -167,7 +167,7 @@ p {
 @media (max-width:719px){/*For low res device,i don't know who the fuck is use such device*/
 	/*this is the fuckin' black div in the center!*/
 .maindiv {
-	width: 100%;
+	width: 98%;
 	height: 100%;
 	border-top: 2px solid rgba(0,0,0,0.1);
 	border-left: 2px solid rgba(0,0,0,0.1);
@@ -179,7 +179,7 @@ p {
 	margin: auto;
 	top: 0;
 	bottom: 0;
-	padding: 20px 20px 20px 20px;
+	padding: 4px 4px 4px 4px;
 	background: rgba(0,0,0,0.30);
 	color: #FFFFFF;
 	align-items: center;
@@ -235,8 +235,8 @@ p {
 	font-size: 18px;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 15px;
+	margin-right: 15px;
 	text-align: justify;
 }
 }
