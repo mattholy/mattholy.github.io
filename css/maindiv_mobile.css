@@ -1,3 +1,4 @@
+
 /*
   This is an css file by Mattholy
   Begin at 09/14/2016
@@ -7,47 +8,49 @@
   */
   
   /*this part is to show mobile display*/
-@media (max-width:899px){
-	.abc {
-		color:#FF0004;
-	}
-	
+@media (max-width:899px) {
+body {
+	background-color: #1a1724;
+}
+.abc {
+	color: #FF0004;
+	font-family:"Source Code Pro";
+}
 }
 
 /*this part is to hide desktop display*/
-@media (max-width:899px){
+@media (max-width:899px) {
 body {
-	
 }
 #canvas {
-	display:none;
+	display: none;
 }
 .canvas-wrap {
-	display:none;
+	display: none;
 }
 div.canvas-content {
-	display:none;
+	display: none;
 }
-	/*this is the fuckin' black div in the center!*/
+/*this is the fuckin' black div in the center!*/
 .maindiv {
-	display:none;
+	display: none;
 }
 /*Hello world css*/
 .wel {
-	display:none;
+	display: none;
 }
 /*button css*/
 .learn_more {
-	display:none;
+	display: none;
 }
 .learn_more:focus {
-	display:none;
+	display: none;
 }
 .learn_more:hover {
-	display:none;
+	display: none;
 }
 /*main words*/
 .godswords {
-	display:none;
+	display: none;
 }
 }
