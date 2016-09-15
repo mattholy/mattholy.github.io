@@ -1,4 +1,5 @@
-/*This is an css file by Mattholy
+/*
+  This is an css file by Mattholy
   Begin at 09/14/2016
   -----------------------------------
   All these code are belong to poetry.
@@ -10,6 +11,39 @@ p {
 	text-indent: 0.5cm;
 }
 @media (min-width:1367px){/*For high res device*/
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+body {
+	background-color: #fff;
+	margin: 0px;
+	/*overflow: hidden;*/
+	font-family: arial;
+	color: #fff;
+	height: 100%;
+}
+#canvas {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #1a1724;
+}
+.canvas-wrap {
+	position: relative;
+	height: 100%;
+}
+div.canvas-content {
+	position: relative;
+	z-index: 2000;
+	color: #fff;
+	text-align: center;
+	padding-top: 30px;
+}
 /*this is the fuckin' black div in the center!*/
 .maindiv {
 	top: 20px;
@@ -87,7 +121,40 @@ p {
 }
 }
 
-@media (max-width:1366px) and (min-width:1024px){/*For mid res device*/
+@media (max-width:1366px) and (min-width:900px){/*For mid res device*/
+* {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+body {
+	background-color: #fff;
+	margin: 0px;
+	/*overflow: hidden;*/
+	font-family: arial;
+	color: #fff;
+	height: 100%;
+}
+#canvas {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: #1a1724;
+}
+.canvas-wrap {
+	position: relative;
+	height: 100%;
+}
+div.canvas-content {
+	position: relative;
+	z-index: 2000;
+	color: #fff;
+	text-align: center;
+	padding-top: 30px;
+}
 	/*this is the fuckin' black div in the center!*/
 .maindiv {
 	width: 600px;
@@ -164,74 +231,9 @@ p {
 }
 }
 
-@media (max-width:1023px){/*For low res device,i don't know who the fuck is use such device*/
-	/*this is the fuckin' black div in the center!*/
-.maindiv {
-	width: 98%;
-	height: 100%;
-	position: fixed;
-	left: 0;
-	right: 0;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	padding: 4px 4px 4px 4px;
-	background: rgba(0,0,0,0.30);
-	color: #FFFFFF;
-	align-items: center;
-}
-/*Hello world css*/
-.wel {
-	text-align: center;
-	font-size: 35px;
-	color: rgba(255,255,255,0.9);
-	font-family: Source Code Pro;
-	margin-top: 20px;
-	margin-bottom: 10px;
-}
-/*button css*/
-.learn_more {
-	position:absolute;
-	bottom:50px;
-	left:0px;
-	right:0px;
-	margin: auto;
-	border-radius: 50px;
-	background: transparent;
-	padding: 10px 50px;
-	border: 2px solid #00BFFF;
-	color: #00BFFF;
-	text-transform: uppercase;
-	font-size: 20px;
-	text-align: center;
-	font-family: "Source Code Pro ExtraLight";
-	width: 150px;
-	-webkit-transition-property: background, color;
-	transition-property: background, color;
-	-webkit-transition-duration: .4s;
-	transition-duration: .4s;
-}
-.learn_more:focus {
-	box-shadow: none;
-	outline: none;
-}
-.learn_more:hover {
-	background: #00BFFF;
-	color: rgba(255,255,255,1.00);
-	cursor: pointer;
-	-webkit-transition-property: background, color;
-	transition-property: background, color;
-	-webkit-transition-duration: .4s;
-	transition-duration: .4s;
-}
-/*main words*/
-.godswords {
-	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, sans-serif;
-	font-size: 18px;
-	left:10px;
-	right:10px;
-	margin-left:10px;
-	margin-right:12px;
-	text-align: justify;
+/*this part is to hide mobile display*/
+@media (min-width:900px){/*put everthing in maindiv_mobile.css here with display:none;*/
+.abc {
+	display:none;
 }
 }

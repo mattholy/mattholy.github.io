@@ -1,0 +1,53 @@
+/*
+  This is an css file by Mattholy
+  Begin at 09/14/2016
+  -----------------------------------
+  All these code are belong to poetry.
+  Use with caution!
+  */
+  
+  /*this part is to show mobile display*/
+@media (max-width:899px){
+	.abc {
+		color:#FF0004;
+	}
+	
+}
+
+/*this part is to hide desktop display*/
+@media (max-width:899px){
+body {
+	
+}
+#canvas {
+	display:none;
+}
+.canvas-wrap {
+	display:none;
+}
+div.canvas-content {
+	display:none;
+}
+	/*this is the fuckin' black div in the center!*/
+.maindiv {
+	display:none;
+}
+/*Hello world css*/
+.wel {
+	display:none;
+}
+/*button css*/
+.learn_more {
+	display:none;
+}
+.learn_more:focus {
+	display:none;
+}
+.learn_more:hover {
+	display:none;
+}
+/*main words*/
+.godswords {
+	display:none;
+}
+}
