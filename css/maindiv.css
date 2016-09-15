@@ -9,7 +9,7 @@ p {
 	padding: 5px 0;
 	text-indent: 0.5cm;
 }
-@media (min-width:1280px){/*For high res device*/
+@media (min-width:1367px){/*For high res device*/
 /*this is the fuckin' black div in the center!*/
 .maindiv {
 	top: 20px;
@@ -87,7 +87,7 @@ p {
 }
 }
 
-@media (max-width:1279px) and (min-width:720px){/*For mid res device*/
+@media (max-width:1366px) and (min-width:1024px){/*For mid res device*/
 	/*this is the fuckin' black div in the center!*/
 .maindiv {
 	width: 600px;
@@ -164,7 +164,7 @@ p {
 }
 }
 
-@media (max-width:719px){/*For low res device,i don't know who the fuck is use such device*/
+@media (max-width:1023px){/*For low res device,i don't know who the fuck is use such device*/
 	/*this is the fuckin' black div in the center!*/
 .maindiv {
 	width: 98%;
