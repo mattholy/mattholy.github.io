@@ -1,98 +1,107 @@
-
-
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>南华大学教务管理系统,智慧教务,智慧人生</title>
-    <link href="http://jwzx.usc.edu.cn/Content/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <!--加载共通CSS-->
-    <link href="http://jwzx.usc.edu.cn/Content/css/login.css" rel="stylesheet" type="text/css" />
-    <link href="http://jwzx.usc.edu.cn/Content/themes/default/easyui.css" rel="stylesheet" />
-    <link href="http://jwzx.usc.edu.cn/Content/css/icon/icon.css" rel="stylesheet" type="text/css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<title>教务在线</title>
+<link href="css/weui.min.css" rel="stylesheet" type="text/css">
+<link href="css/example.css" rel="stylesheet" type="text/css">
 </head>
-<body style="background:#f1f1f1;">
-    <div data-options="region:'north',border:false,split:false" style="height: 55px;">
-        <div class="home-head">
+<body ontouchstart style="background-color: #fbf9fe">
+<div class="container" id="container"></div>
+<script type="text/html" id="tpl_home">
+<div class="weui_msg">
+    <div class="weui_icon_area"><i class="weui_icon_safe_warn weui_icon_msg"></i></div>
+    <div class="weui_text_area">
+        <h2 class="weui_msg_title">注意</h2>
+        <p class="weui_msg_desc">本服务号开发此功能旨在方便大家登录教务在线，它绝对不会记录您的帐号和密码，请放心使用。</p>
+    </div>
+    <div class="weui_opr_area">
+        <p class="weui_btn_area">
+            <a href="#/cell" class="weui_btn weui_btn_primary">好的</a>
+            <a href="javascript:window.opener=null;window.open('','_self');window.close();" class="weui_btn weui_btn_warn">拒绝</a>
+        </p>
+    </div>
+    <div class="weui_extra_area">
+        <a href="">查看详情</a>
+    </div>
+</div>
+</script> 
+<script type="text/html" id="tpl_cell">
+<div class="hd">
+    <h1 class="page_title">南华大学教务在线</h1>
+</div>
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">学号</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" id="Username" type="number" pattern="[0-9]*" placeholder="请输您的学号"/>
+            </div>
+        </div>
+		<div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">密码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" id="Password" type="password" placeholder="请输入您的密码"/>
+            </div>
+        </div>
+        <div class="weui_cell weui_vcode">
+            <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" id="Code" type="text" placeholder="请输入验证码(点击验证码可以刷新)"/>
+            </div>
+            <div class="weui_cell_ft" style="cursor:pointer">
+                <img src="http://jwzx.usc.edu.cn/Core/verify_code.ashx" onclick="this.src=this.src+'?'"/>
+            </div>
         </div>
     </div>
-    <div style="margin: 0 auto; margin-top: 100px; width: 800px; border:double">
-        <table style="width: 800px; margin: 0 auto;">
-            <tr>
-                <td><img src="http://jwzx.usc.edu.cn/Content/Images/account.jpg"></td>
-                <td style="width: 310px; height:360px">
-
-                    <table id="LoginTb" style="background: #f1f1f1; width: 100%; height: 357px; border: 1px #ccc solid;">
-                        <tr>
-                            <td colspan="2" style="font-size: 18px;  font-weight: bold; padding: 5px 45px;">
-                                南华大学教务系统欢迎你
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 80px; text-align: right">
-                                用户名：
-                            </td>
-                            <td>
-                                <input id="UserName" name="UserName" type="text" />
-                            </td>
-                        </tr>
-                        <tr>
-                            <td style="width: 80px; text-align: right;">
-                                密 码：
-                            </td>
-                            <td>
-                                <input id="Password" name="Password" type="password" />
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="width: 80px; text-align: right">
-                                验证码：
-                            </td>
-                            <td>
-                                <input style="width: 50px" type="text" name="ValidateCode" id="ValidateCode" />
-                                <img id="codeImg" alt="刷新验证码！" style="margin-bottom: -8px; cursor: pointer;" src="http://jwzx.usc.edu.cn/Core/verify_code.ashx" onclick="this.src=this.src+'?'" />
-                                <a href="javascript:$('#codeImg').trigger('click')">看不清？</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                                <table style="width: 100%;">
-                                    <tr>
-                                        <td style="width:40px;">&nbsp;</td>
-                                        <td>
-                                            <div id="mes" class="field-validation-error">
-                                            </div>
-                                            <div id="Loading" style="display: none" class='panel-loading'><font color='#000'>加载中...</font></div>
-                                        </td>
-                                        <td style="width: 100px;">
-                                            <a id="LoginSys" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-group'">登录系统</a>
-                                        </td>
-                                    </tr>
-
-                                </table>
-
-                            </td>
-                        </tr>
-
-                    </table>
-                </td>
-            </tr>
-        </table>
-
+	<div class="weui_cells weui_cells_form">
+        <div class="weui_cell weui_cell_switch">
+            <div class="weui_cell_hd weui_cell_primary">记住登陆状态</div>
+            <div class="weui_cell_ft">
+                <input class="weui_switch" type="checkbox"/>
+            </div>
+        </div>
     </div>
-    <div style="background:#f1f1f1; height:40px; width:100%; text-align:center; line-height:40px;border-top:1px #ccc solid;bottom:0; position:absolute">
-
+    <div class="weui_cells_tips">这项功能正在开发，选不选都一样记不住。。。</div>
+    <div class="weui_btn_area">
+        <a class="weui_btn weui_btn_primary" href="javascript:" id="showLoadingToast">走你</a>
     </div>
-    <script>
-var requireConfig = {"locale":"zh","pageOptions":{},"websiteOptions":{}};
-var require = {"baseUrl":"js/","locale":"zh","urlArgs":null,"waitSeconds":7,"paths":{"jquery":"jquery.min","easyui":"jquery.easyui.min","easyuiPlus":"jquery.easyui.plus","easyuiCN":"easyui-lang-zh_CN","easyuiGroup":"http://jwzx.usc.edu.cn/Content/js/datagrid-groupview","uploadify":"http://jwzx.usc.edu.cn/Content/js/uploadify/jquery.uploadify","WdatePicker":"http://jwzx.usc.edu.cn/Content/js/WdatePicker"},"shim":{"easyui":{"deps":["jquery"],"exports":null},"easyuiPlus":{"deps":["jquery","easyui"],"exports":null},"easyuiCN":{"deps":["jquery","easyui"],"exports":null}},"map":{}};
-</script>
-<script src="js/require.js"></script>
-<script>
-require(["js/usc.js"]);
-</script>
+<!--loading-->
+<div id="loadingToast" class="weui_loading_toast" style="display:none;">
+    <div class="weui_mask_transparent"></div>
+    <div class="weui_toast">
+        <div class="weui_loading">
+            <div class="weui_loading_leaf weui_loading_leaf_0"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_1"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_2"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_3"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_4"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_5"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_6"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_7"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_8"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_9"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_10"></div>
+            <div class="weui_loading_leaf weui_loading_leaf_11"></div>
+        </div>
+        <p class="weui_toast_content">正在连接教务在线</p>
+    </div>
+</div>
+<!--dialog-->
+<div class="weui_dialog_alert" id="dialog1" style="display: none;">
+    <div class="weui_mask"></div>
+    <div class="weui_dialog">
+        <div class="weui_dialog_hd"><strong class="weui_dialog_title">哎呀，登录失败</strong></div>
+        <div class="weui_dialog_bd">教务系统没有返回任何数据</div>
+        <div class="weui_dialog_ft">
+            <a href="javascript:;" class="weui_btn_dialog primary" onclick="$('#dialog1').off('click').hide()">真遗憾</a>
+        </div>
+    </div>
+</div>
+<!--END dialog-->
+</script> 
+<script src="js/zepto.min.js"></script> 
+<script src="js/router.min.js"></script> 
+<script src="js/usc.js"></script>
 </body>
 </html>
