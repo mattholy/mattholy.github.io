@@ -14,7 +14,7 @@
 	list-style-type: none;
 }
 p {
-	padding: 10px 0;
+	padding: 5px 0;
 	text-indent: 4%;
 }
 #canvas {
@@ -220,7 +220,7 @@ div.canvas-content {
 /*Hello world css*/
 .wel {
 	text-align: center;
-	font-size: 35px;
+	font-size: 30px;
 	color: rgba(255,255,255,0.9);
 	font-family: 'SourceCodePro-Regular';
 	margin-top: 25px;
@@ -236,7 +236,7 @@ div.canvas-content {
 	margin-top:10px;
 	padding-left:30px;
 	padding-right:30px;
-	text-align: justify;
+	text-align:justify;
 }
 /*button css*/
 .learn_more {
