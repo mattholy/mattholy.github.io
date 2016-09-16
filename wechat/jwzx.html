@@ -1,0 +1,98 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>南华大学教务管理系统,智慧教务,智慧人生</title>
+    <link href="http://jwzx.usc.edu.cn/Content/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <!--加载共通CSS-->
+    <link href="http://jwzx.usc.edu.cn/Content/css/login.css" rel="stylesheet" type="text/css" />
+    <link href="http://jwzx.usc.edu.cn/Content/themes/default/easyui.css" rel="stylesheet" />
+    <link href="http://jwzx.usc.edu.cn/Content/css/icon/icon.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background:#f1f1f1;">
+    <div data-options="region:'north',border:false,split:false" style="height: 55px;">
+        <div class="home-head">
+        </div>
+    </div>
+    <div style="margin: 0 auto; margin-top: 100px; width: 800px; border:double">
+        <table style="width: 800px; margin: 0 auto;">
+            <tr>
+                <td><img src="http://jwzx.usc.edu.cn/Content/Images/account.jpg"></td>
+                <td style="width: 310px; height:360px">
+
+                    <table id="LoginTb" style="background: #f1f1f1; width: 100%; height: 357px; border: 1px #ccc solid;">
+                        <tr>
+                            <td colspan="2" style="font-size: 18px;  font-weight: bold; padding: 5px 45px;">
+                                南华大学教务系统欢迎你
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 80px; text-align: right">
+                                用户名：
+                            </td>
+                            <td>
+                                <input id="UserName" name="UserName" type="text" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="width: 80px; text-align: right;">
+                                密 码：
+                            </td>
+                            <td>
+                                <input id="Password" name="Password" type="password" />
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="width: 80px; text-align: right">
+                                验证码：
+                            </td>
+                            <td>
+                                <input style="width: 50px" type="text" name="ValidateCode" id="ValidateCode" />
+                                <img id="codeImg" alt="刷新验证码！" style="margin-bottom: -8px; cursor: pointer;" src="http://jwzx.usc.edu.cn/Core/verify_code.ashx" onclick="this.src=this.src+'?'" />
+                                <a href="javascript:$('#codeImg').trigger('click')">看不清？</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <table style="width: 100%;">
+                                    <tr>
+                                        <td style="width:40px;">&nbsp;</td>
+                                        <td>
+                                            <div id="mes" class="field-validation-error">
+                                            </div>
+                                            <div id="Loading" style="display: none" class='panel-loading'><font color='#000'>加载中...</font></div>
+                                        </td>
+                                        <td style="width: 100px;">
+                                            <a id="LoginSys" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-group'">登录系统</a>
+                                        </td>
+                                    </tr>
+
+                                </table>
+
+                            </td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+    <div style="background:#f1f1f1; height:40px; width:100%; text-align:center; line-height:40px;border-top:1px #ccc solid;bottom:0; position:absolute">
+
+    </div>
+    <script>
+var requireConfig = {"locale":"zh","pageOptions":{},"websiteOptions":{}};
+var require = {"baseUrl":"/Scripts/","locale":"zh","urlArgs":null,"waitSeconds":7,"paths":{"jquery":"http://jwzx.usc.edu.cn/Content/js/jquery.min","easyui":"http://jwzx.usc.edu.cn/Content/js/jquery.easyui.min","easyuiPlus":"http://jwzx.usc.edu.cn/Content/js/jquery.easyui.plus","easyuiCN":"http://jwzx.usc.edu.cn/Content/js/easyui-lang-zh_CN","easyuiGroup":"http://jwzx.usc.edu.cn/Content/js/datagrid-groupview","uploadify":"http://jwzx.usc.edu.cn/Content/js/uploadify/jquery.uploadify","WdatePicker":"http://jwzx.usc.edu.cn/Content/js/WdatePicker"},"shim":{"easyui":{"deps":["jquery"],"exports":null},"easyuiPlus":{"deps":["jquery","easyui"],"exports":null},"easyuiCN":{"deps":["jquery","easyui"],"exports":null}},"map":{}};
+</script>
+<script src="http://jwzx.usc.edu.cn/Content/js/require.js"></script>
+<script>
+require(["js/usc.js"]);
+</script>
+</body>
+</html>
