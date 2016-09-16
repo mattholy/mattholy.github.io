@@ -8,6 +8,18 @@
 <link href="css/example.css" rel="stylesheet" type="text/css">
 </head>
 <body ontouchstart style="background-color: #fbf9fe">
+<script type="text/javascript">
+    // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
+    var useragent = navigator.userAgent;
+    if (useragent.match(/MicroMessenger/i) != 'MicroMessenger') {
+        // 这里警告框会阻塞当前页面继续加载
+        alert('这是一个用微信才可以访问的网页噢~');
+        // 以下代码是用javascript强行关闭当前页面
+        var opened = window.open('about:blank', '_self');
+        opened.opener = null;
+        opened.close();
+    }
+</script>
 <div class="container" id="container"></div>
 <script type="text/html" id="tpl_home">
 <div class="weui_msg">
