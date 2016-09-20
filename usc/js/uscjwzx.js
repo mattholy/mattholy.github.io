@@ -6,13 +6,7 @@ This is a js file written by Mattholy
 //检查并加载iframe
 function jwzx()
 {
-	window.onload=function()
-	{
-	var doc=document.getElementById("uscjwzx").contentWindow.document;
-	alert("asd");
-	alert(doc);
-	alert("123");
-	};
+	document.getElementById('setMsg').innerHTML=document.getElementById('uscjwzx').contentWindow.document.getElementsByTagName('title').innerHTML;
 }
 
 //检测输入数据正确无误，然后输入至iframe相关对象里
