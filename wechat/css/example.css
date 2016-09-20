@@ -47,7 +47,7 @@ body {
 	margin: 0 auto;
 	text-align: justify;
 	text-justify: distribute-all-lines;
-	font-size: 0
+	font-size: 0;
 }
 .button .button_sp_area:after {
 	display: inline-block;

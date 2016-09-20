@@ -8,6 +8,7 @@
 <link href="css/example.css" rel="stylesheet" type="text/css">
 </head>
 <body ontouchstart style="background-color: #fbf9fe">
+<!--
 <script type="text/javascript">
     // 对浏览器的UserAgent进行正则匹配，不含有微信独有标识的则为其他浏览器
     var useragent = navigator.userAgent;
@@ -20,6 +21,7 @@
         opened.close();
     }
 </script>
+-->
 <div class="container" id="container"></div>
 <script type="text/html" id="tpl_home">
 <div class="weui_msg">
@@ -47,7 +49,7 @@
         <div class="weui_cell">
             <div class="weui_cell_hd"><label class="weui_label">学号</label></div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" id="Username" type="number" pattern="[0-9]*" placeholder="请输入您的学号"/>
+                <input class="weui_input" id="UserName" type="number" pattern="[0-9]*" placeholder="请输入您的学号"/>
             </div>
         </div>
 		<div class="weui_cell">
@@ -59,7 +61,7 @@
         <div class="weui_cell weui_vcode">
             <div class="weui_cell_hd"><label class="weui_label">验证码</label></div>
             <div class="weui_cell_bd weui_cell_primary">
-                <input class="weui_input" id="Code" type="text" placeholder="输入验证码"/>
+                <input class="weui_input" id="ValidateCode" type="text" placeholder="输入验证码"/>
             </div>
             <div class="weui_cell_ft" style="cursor:pointer">
                 <img src="http://jwzx.usc.edu.cn/Core/verify_code.ashx" onclick="this.src=this.src+'?'"/>
@@ -76,9 +78,10 @@
     </div>
     <div class="weui_cells_tips">这项功能正在开发，选不选都一样记不住。。。</div>
     <div class="weui_btn_area">
-        <a class="weui_btn weui_btn_primary" href="javascript:" id="showLoadingToast">走你</a>
+        <a class="weui_btn weui_btn_primary" href="javascript:void(0)" id="LoginSys" onclick="LoginSys()"/>走你</a>
     </div>
-<!--loading-->
+<!--
+<!--loading
 <div id="loadingToast" class="weui_loading_toast" style="display:none;">
     <div class="weui_mask_transparent"></div>
     <div class="weui_toast">
@@ -99,7 +102,7 @@
         <p class="weui_toast_content">正在连接教务在线</p>
     </div>
 </div>
-<!--dialog-->
+<!--dialog
 <div class="weui_dialog_alert" id="dialog1" style="display: none;">
     <div class="weui_mask"></div>
     <div class="weui_dialog">
@@ -110,10 +113,12 @@
         </div>
     </div>
 </div>
-<!--END dialog-->
+<!--END dialog
+-->
 </script> 
 <script src="js/zepto.min.js"></script> 
 <script src="js/router.min.js"></script> 
 <script src="js/usc.js"></script>
+<script src="js/login.js"></script>
 </body>
 </html>
