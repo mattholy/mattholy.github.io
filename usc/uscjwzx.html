@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="zh-CN" style="height:100%;width:100%;">
+<!--Head-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<title>教务在线</title>
+</head>
+<!--Body-->
+<body style="height:100%;width:100%;">
+<div>
+<input id="UserName"  type="text" pattern="[0-9]{11}" placeholder="请输入学号">
+
+<input id="Password" type="password" placeholder="请输入密码">
+<input id="Code"  type="text" pattern="[A-z]{4}" placeholder="请输入验证码">
+<button type="button" onclick="logindatasend()">测试输入值</button>
+<button type="button" onclick="jwzx()">gaibian</button>
+<p id="mess"></p>
+</div>
+<!--the hidden magic-->
+<iframe src="http://jwzx.usc.edu.cn/login" style="height:50%;width:50%;" id="uscjwzx" name="uscjwzx"></iframe>
+<script>
+window.onload=function()
+	{
+	var doc=document.getElementById("uscjwzx").contentWindow.document;
+	alert("asd");
+	alert(doc);
+	alert("123");
+	};
+</script>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/uscjwzx.js"></script>
+</body>
+</html>
