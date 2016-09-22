@@ -66,5 +66,5 @@ function logindatasend()
                    else {
                        $("#mess").html(data.message);
                    }
-               }, "jsonp");
+               }, "json");
 }
