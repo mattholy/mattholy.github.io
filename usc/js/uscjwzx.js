@@ -13,11 +13,10 @@ function jwzx()
 //检测输入数据正确无误，然后输入至iframe相关对象里
 function logindatasend()
 {
-	var username=document.getElementById("UserName").value;
-	var password=document.getElementById("Password").value;
-	var code=document.getElementById("Code").value;
+	var username=$("#UserName").val();
+	var password=$("#Password").val();
+	var code=$("#Code").val();
 	var username_length=username.length;
-	
 	//判断学号
 	if (username==="")
 	{
@@ -59,5 +58,13 @@ function logindatasend()
 	{
 		$("#mess").html("");
 	}
-	alert(iscomplat);//这是测试
+	$.post('http://jwzx.usc.edu.cn/Login/Login', { UserName: $("#UserName").val(), Password: $("#Password").val(), Code: $("#ValidateCode").val() },
+               function (data) {
+                   if (data.type == "1") {
+                       window.location = "http://jwzx.usc.edu.cn/Home/Index"
+                   }
+                   else {
+                       $("#mess").html(data.message);
+                   }
+               }, "jsonp");
 }
