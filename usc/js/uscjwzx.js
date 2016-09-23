@@ -51,7 +51,7 @@ function logindatasend()
 	{
 		$("#mess").html("");
 	}
-	$.post('http://42.48.187.76/login/login', { UserName: $("#UserName").val(), Password: $("#Password").val(), Code: $("#Code").val() },
+	$.post('http://jwzx.usc.edu.cn/login/login', { UserName: $("#UserName").val(), Password: $("#Password").val(), Code: $("#Code").val() },
                function (data) {
                    if (data.type == "1") {
                        window.location = "http://jwzx.usc.edu.cn/Home/Index"
