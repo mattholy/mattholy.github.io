@@ -6,7 +6,7 @@ This is a js file written by Mattholy
 //检查并加载iframe
 function jwzx()
 {
-	//document.getElementById('setMsg').html(document.getElementById('uscjwzx').contentWindow.document.getElementsByTagName('title').innerHTML;
+	var con=window.top.document.getElementById('uscjwzx').contentWindow.getElementById('UserName').value=20134380136;
 	
 }
 
@@ -58,7 +58,7 @@ function logindatasend()
 	{
 		$("#mess").html("");
 	}
-	$.post('http://jwzx.usc.edu.cn/Login/Login', { UserName: $("#UserName").val(), Password: $("#Password").val(), Code: $("#ValidateCode").val() },
+	$.post('http://42.48.187.76/login/login', { UserName: $("#UserName").val(), Password: $("#Password").val(), Code: $("#Code").val() },
                function (data) {
                    if (data.type == "1") {
                        window.location = "http://jwzx.usc.edu.cn/Home/Index"
