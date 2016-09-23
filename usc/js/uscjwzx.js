@@ -3,13 +3,6 @@ This is a js file written by Mattholy
 2016/09/20, PM 10:25:00
 */
 
-//检查并加载iframe
-function jwzx()
-{
-	var con=window.top.document.getElementById('uscjwzx').contentWindow.getElementById('UserName').value=20134380136;
-	
-}
-
 //检测输入数据正确无误，然后输入至iframe相关对象里
 function logindatasend()
 {
