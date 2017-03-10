@@ -91,18 +91,18 @@ h2 {
 	width: 200px;
 	-webkit-transition-property: background, color;
 	transition-property: background, color;
-	-webkit-transition-duration: .4s;
-	transition-duration: .4s;
+	-webkit-transition-duration: .5s;
+	transition-duration: .5s;
 }
 
 .PhoneButton:hover {
 	background: #00BFFF;
-	color: rgba(255,255,255,1);
+	color: rgba(255,255,255,1.00);
 	cursor: pointer;
 	-webkit-transition-property:all;
 	transition-property:all;
-	-webkit-transition-duration: 1s;
-	ransition-duration: 1s;
+	-webkit-transition-duration: .5s;
+	ransition-duration: .5s;
 }
 
 .PhoneMain {
@@ -122,11 +122,6 @@ h2 {
 	ransition-duration: 1s;
 }
 
-.PhoneTittle {
-	padding-top:20px;
-	padding-bottom:20px;
-}
-
 .PageTittle {
 	padding-top:10px;
 	padding-bottom:10px;
@@ -142,6 +137,7 @@ h2 {
 	font-size:150px;
 	display:none;
 	color:#EFEFEF;
+	font-family: HanShaoJiehandanti;
 	-webkit-transition-property:all;
 	transition-property:all;
 	-webkit-transition-duration: 2s;
@@ -162,21 +158,5 @@ h2 {
 	transition-property:all;
 	-webkit-transition-duration: 2s;
 	ransition-duration: 2s;
+	font-family: HanShaoJiehandanti;
 }
-
-.Other {
-	z-index:25;
-	position:absolute;
-	-webkit-transition-property:all;
-	transition-property:all;
-	-webkit-transition-duration: .5s;
-	ransition-duration: .5s;
-}
-
-.InnerPage {
-	position:absolute;
-	z-index:20;
-	top:0px;
-	width:100%;
-}
-	

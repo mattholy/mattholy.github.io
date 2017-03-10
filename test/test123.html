@@ -3,219 +3,208 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+<meta name="author" content="Mattholy|甘元浩" />
 <script src="js/jquery-3.1.1.js"></script>
 <script src="js/test.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <title>南华大学教务在线Demo</title>
 <link href="css/test.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="css/weui.min.css"/>
+<link rel="stylesheet" href="css/font.css"/>
+<link rel="stylesheet" href="css/phone.css"/>
+<link rel="stylesheet" href="resource/font-awesome-4.7.0/css/font-awesome.min.css"/>
 </head>
-<div id="face" class="face"></div>
+
 <body ontouchstart>
-
 <div id="Header" class="header"><img src="resource/logo.png"/></div>
-
-<section id="main">
-
-<div id="SelectPhone" class="selector-left">
-<div class="LeftSlogan" id="LeftSlogan"><p>高端</p><p>大气</p><p>上档次</p></div>
-<div class="RightSlogan" id="RightSlogan"><p>点击</p><p>登录</p><p>去体验</p></div>
-<img id="PhoneImg" src="resource/phone.png" class="PhoneImg"/>
-<!---移动端重点设计--->
-<div id="PhoneMain" class="PhoneMain">
-<!--登录页面-->
-<div id="LoginSheet" class="Other">
-<div class="PhoneTittle">
-<h1>南华大学</h1>
-<h1>教务管理系统</h1>
-</div>
-<div class="weui-cells weui-cells_form">
-    <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">学号</label></div>
-        <div class="weui-cell__bd">
-            <input class="weui-input" type="number" placeholder="输入你的学号">
-        </div>
-    </div>
-    <div class="weui-cell">
-        <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
-        <div class="weui-cell__bd">
-            <input class="weui-input" type="password" placeholder="输入你的密码">
-        </div>
-    </div>
-    <div class="weui-cell weui-cell_vcode">
-        <div class="weui-cell__hd">
-            <label class="weui-label">验证码</label>
-        </div>
-        <div class="weui-cell__bd">
-            <input class="weui-input" type="text" placeholder="输入验证码">
-        </div>
-        <div class="weui-cell__ft">
-            <img class="weui-vcode-img" src="http://jwzx.usc.edu.cn/Core/verify_code.ashx">
-        </div>
-    </div>
-</div>
-<div class="weui-cells weui-cells_form">
-    <div class="weui-cell weui-cell_switch">
-        <div class="weui-cell__bd">保持登录状态</div>
-        <div class="weui-cell__ft">
-            <input class="weui-switch" type="checkbox">
-        </div>
-    </div>
-</div>
-<label for="" class="weui-agree">
-    <input type="checkbox" class="weui-agree__checkbox">
-    <span class="weui-agree__text">
-        阅读并同意<a href="javascript:void(0);" onclick="ShowStatement()">《我的说明》</a>
-    </span>
-</label>
-<div class="weui-btn-area"><a href="javascript:void(0);" onclick="Login()" class="weui-btn weui-btn_primary">登录</a></div>
-<div id="loginToast" style="display:none;">
-    <div class="weui-mask_transparent"></div>
-    <div class="weui-toast">
-        <i class="weui-loading weui-icon_toast"></i>
-        <p class="weui-toast__content">登陆中</p>
-    </div>
-</div>
-<div id="logedToast" style="display: none;">
-    <div class="weui-mask_transparent"></div>
-    <div class="weui-toast">
-        <i class="weui-icon-success-no-circle weui-icon_toast"></i>
-        <p class="weui-toast__content">登陆成功</p>
-    </div>
-</div>
-<div class="weui-footer">
-    <p class="weui-footer__links">
-        <a href="https://mattholy.github.io" class="weui-footer__link">开发者网站</a>
-    </p>
-    <p class="weui-footer__text">Copyright © 2016 Mattholy</p>
-</div>
-</div>
-<!--个人主页-->
-<div id="Personal" style="display: none;" class="InnerPage">
-<div class="PageTittle">
-<h2>欢迎你，鄂尔泰</h2>
-</div>
-<div id="PerInfo">
-<!-- 九宫格 -->
-<div class="weui-grids">
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/xj.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">学籍</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/xk.png" alt=""><span class="weui-badge" style="position: absolute;top: 10px;right: 27px;">New</span>
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">选课</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/kb.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">课表</p><span class="weui-badge" style="position: absolute;top: 10px;right: 10px;">今天：3</span>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/cj.png" alt=""><span class="weui-badge" style="position: absolute;top: 10px;right: 27px;">3</span>
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">成绩</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/cx.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">重修</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/fx.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">辅修</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/ks.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">考试</p><span class="weui-badge" style="position: absolute;top: 10px;right: 10px;">本周：1</span>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/pj.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">评教</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/bm.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">报名</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/wj.png" alt=""><span class="weui-badge" style="position: absolute;top: 10px;right: 27px;">8</span>
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">常用文件</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/gj.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">实用工具</p>
-    </a>
-    <a href="#" class="weui-grid">
-        <!-- 图标 -->
-        <div class="weui-grid__icon">
-            <img src="resource/sz.png" alt="">
-        </div>
-        <!-- 标签文字 -->
-        <p class="weui-grid__label">设置</p>
-    </a>
-</div>
-<div class="weui-btn-area"><a href="javascript:void(0);" onclick="Login()" class="weui-btn weui-btn_warn">退出系统</a></div>
-<div class="weui-footer">
-    <p class="weui-footer__links">
-        <a href="https://mattholy.github.io" class="weui-footer__link">开发者网站</a>
-    </p>
-    <p class="weui-footer__text">Copyright © 2016 Mattholy</p>
-</div>
-</div>
-</div>
-</div>
-
-
-
-<div id="PhoneButton" class="PhoneButton" onclick="SetupPhone()">移动端界面<br>点击继续</div>
-</div>
-
-
-<div id="SelectDesktop" class="selector-right" onclick="SetupDesktop()"><p>桌面端显示</p></div>
-
-
+<!--这个section是主要内容所在地-->
+<section id="main"> 
+	<!--这个div是移动端界面区域-->
+	<div id="SelectPhone" class="selector-left">
+		<div class="LeftSlogan" id="LeftSlogan">
+			<p>高端</p>
+			<p>大气</p>
+			<p>上档次</p>
+		</div>
+		<div class="RightSlogan" id="RightSlogan">
+			<p>点击</p>
+			<p>登录</p>
+			<p>去体验</p>
+		</div>
+		<img id="PhoneImg" src="resource/phone.png" class="PhoneImg"/> 
+		<!---移动端 UI--->
+		<div id="PhoneMain" class="PhoneMain"> 
+			<!--警告性弹窗-->
+			<div id="Dialog1" style="display: none">
+				<div class="W_mask"></div>
+				<div class="weui-dialog">
+					<div class="weui-dialog__hd"><strong class="weui-dialog__title" id="Dialog1Title"></strong></div>
+					<div class="weui-dialog__bd" id="Dialog1Content"></div>
+					<div class="weui-dialog__ft"> <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_default" id="SecondChoice"></a> <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="FirstChoice"></a> </div>
+				</div>
+			</div>
+			<div id="Dialog2" style="display: none;">
+				<div class="W_mask"></div>
+				<div class="weui-dialog">
+					<div class="weui-dialog__hd"><strong class="weui-dialog__title" id="Dialog2Title"></strong></div>
+					<div class="weui-dialog__bd" id="Dialog2Content"></div>
+					<div class="weui-dialog__ft"> <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary" id="Goahead"></a> </div>
+				</div>
+			</div>
+			<!--登录页面-->
+			<div id="LoginSheet" class="Other">
+				<div class="PhoneTittle">
+					<h1>南华大学</h1>
+					<h1>教务管理系统</h1>
+				</div>
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell">
+						<div class="weui-cell__hd">
+							<label class="weui-label">学号</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" type="number" placeholder="输入你的学号" id="UserName">
+						</div>
+					</div>
+					<div class="weui-cell">
+						<div class="weui-cell__hd">
+							<label class="weui-label">密码</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" type="password" placeholder="输入你的密码">
+						</div>
+					</div>
+					<div class="weui-cell weui-cell_vcode">
+						<div class="weui-cell__hd">
+							<label class="weui-label">验证码</label>
+						</div>
+						<div class="weui-cell__bd">
+							<input class="weui-input" type="text" placeholder="输入验证码">
+						</div>
+						<div class="weui-cell__ft"> <img class="weui-vcode-img" src="http://jwzx.usc.edu.cn/Core/verify_code.ashx"> </div>
+					</div>
+				</div>
+				<div class="weui-cells weui-cells_form">
+					<div class="weui-cell weui-cell_switch">
+						<div class="weui-cell__bd">保持登录状态</div>
+						<div class="weui-cell__ft">
+							<input class="weui-switch" type="checkbox">
+						</div>
+					</div>
+				</div>
+				<label class="weui-agree" id="tyxy" onClick="AlertDown()">
+					<input type="checkbox" class="weui-agree__checkbox" id="ty">
+					<span class="weui-agree__text">阅读并同意<a href="javascript:void(0);" onclick="ShowAgreement()">《用户协议》</a></span> </label>
+				<div class="weui-btn-area"><a href="javascript:void(0);" onclick="Login()" class="weui-btn weui-btn_primary">登录</a></div>
+				<div id="loginToast" style="display:none;">
+					<div class="weui-mask_transparent"></div>
+					<div class="weui-toast"> <i class="weui-loading weui-icon_toast"></i>
+						<p class="weui-toast__content">登陆中</p>
+					</div>
+				</div>
+				<div id="logedToast" style="display: none;">
+					<div class="weui-mask_transparent"></div>
+					<div class="weui-toast"> <i class="weui-icon-success-no-circle weui-icon_toast"></i>
+						<p class="weui-toast__content">登陆成功</p>
+					</div>
+				</div>
+				<div class="weui-footer">
+					<p class="weui-footer__links"> <a href="https://mattholy.github.io" class="weui-footer__link">开发者网站</a> </p>
+					<p class="weui-footer__text">Copyright © 2016 Mattholy</p>
+				</div>
+			</div>
+			<!--个人主页-->
+			<div id="Personal" class="InnerPage">
+				<div class="PageTittle">
+					<h2>欢迎你，<span id="NameTitle">20134380136</span></h2>
+				</div>
+				<div id="PerInfo">
+					<div class="weui-grids"> <a href="javascript:void(0);" onClick="GotoStudentInfo()" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/xj.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">学籍</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/xk.png" alt=""><span class="weui-badge" style="position: absolute;top: 10px;right: 27px;">New</span> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">选课</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/kb.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">课表</p>
+						<span class="weui-badge" style="position: absolute;top: 10px;right: 10px;">今天：3</span> </a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/cj.png" alt=""><span class="weui-badge" style="position: absolute;top: 10px;right: 27px;">3</span> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">成绩</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/cx.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">重修</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/fx.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">辅修</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/ks.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">考试</p>
+						<span class="weui-badge" style="position: absolute;top: 10px;right: 10px;">本周：1</span> </a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/pj.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">评教</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/bm.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">报名</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/wj.png" alt=""><span class="weui-badge" style="position: absolute;top: 10px;right: 27px;">8</span> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">常用文件</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/gj.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">实用工具</p>
+						</a> <a href="#" class="weui-grid"> 
+						<!-- 图标 -->
+						<div class="weui-grid__icon"> <img src="resource/sz.png" alt=""> </div>
+						<!-- 标签文字 -->
+						<p class="weui-grid__label">设置</p>
+						</a> </div>
+					<div class="weui-btn-area"><a href="javascript:void(0);" onclick="Login()" class="weui-btn weui-btn_warn">退出系统</a></div>
+					<div class="weui-footer">
+						<p class="weui-footer__links"> <a href="https://mattholy.github.io" class="weui-footer__link">开发者网站</a> </p>
+						<p class="weui-footer__text">Copyright © 2016 Mattholy</p>
+					</div>
+				</div>
+			</div>
+			<!--学籍信息-->
+			<div id="StudentInfo" class="InnerPage">
+				<div id="TopBar" class="TopBar">
+					<div class="Title">学籍信息</div><div class="GoBack" onClick="GoBack()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div id="PhoneButton" class="PhoneButton" onclick="SetupPhone()">移动端界面演示<br>
+			点击开始</div>
+	</div>
+	
+	<!--这个div是桌面界面区域-->
+	<div id="SelectDesktop" class="selector-right" onclick="SetupDesktop()">
+		<p>桌面端显示</p>
+	</div>
 </section>
 </body>
-
 </html>
