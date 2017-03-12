@@ -1,63 +1,32 @@
-/*
-This is a js file written by Mattholy
-2016/09/20, PM 10:25:00
-*/
-
-//检测输入数据正确无误，然后输入至iframe相关对象里
-function logindatasend()
-{
-	var username=$("#UserName").val();
-	var password=$("#Password").val();
-	var code=$("#Code").val();
-	var username_length=username.length;
-	//判断学号
-	if (username==="")
-	{
-		$("#mess").html("你好像忘了输入学号");
-		UserName.focus();
-		return;
-	}
-	else if (isNaN(username)||username_length!==11)
-	{
-		$("#mess").html("学号格式不对噢");
-		UserName.focus();
-		return;
-	}
-	else
-	{
-		$("#mess").html("");
-	}
-	
-	//判断密码
-	if (password==="")
-	{
-		$("#mess").html("你还没有输入密码");
-		Password.focus();
-		return
-	}
-	else
-	{
-		$("#mess").html("");
-	}
-	
-	//判断验证码
-	if (code==="")
-	{
-		$("#mess").html("你还没有输入验证码");
-		Code.focus();
-		return
-	}
-	else
-	{
-		$("#mess").html("");
-	}
-	$.post('http://jwzx.usc.edu.cn/login/login', { UserName: $("#UserName").val(), Password: $("#Password").val(), Code: $("#Code").val() },
-               function (data) {
-                   if (data.type == "1") {
-                       window.location = "http://jwzx.usc.edu.cn/Home/Index"
-                   }
-                   else {
-                       $("#mess").html(data.message);
-                   }
-               }, "json");
+function LoginSys() {
+    $("#mes").html("");
+    $("#UserName").removeClass("input-validation-error");
+    $("#Password").removeClass("input-validation-error");
+    $("#ValidateCode").removeClass("input-validation-error");
+    if ($.trim($("#UserName").val()) == "") {
+        $("#UserName").focus();
+        $("#mes").html("用户名不能为空！");
+        return;
+    }
+    if ($.trim($("#Password").val()) == "") {
+        $("#Password").focus();
+        $("#mes").html("密码不能为空！");
+        return;
+    }
+    if ($.trim($("#ValidateCode").val()) == "") {
+        $("#ValidateCode").focus();
+        $("#mes").html("验证字符不能为空！");
+        return;
+    }
+    $("#mes").html("正在努力登录系统...");
+    $.post('http://jwzx.usc.edu.cn/Login/Login', { UserName: $("#UserName").val(), Password: $("#Password").val(), Code: $("#ValidateCode").val() },
+           function (data) {
+               if (data.type == "1") {
+                   window.location = "http://jwzx.usc.edu.cn/Home/Index"
+               }
+               else {
+                   $("#mes").html(data.message);
+               }
+           }, "json");
+    return false;
 }

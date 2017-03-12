@@ -116,15 +116,15 @@
 			<!--个人主页-->
 			<div id="Personal" class="InnerPage">
 				<div class="PageTittle">
-					<h2>欢迎你，<span id="NameTitle">20134380136</span></h2>
+					<h2>欢迎你，<span id="NameTitle">123123</span></h2>
 				</div>
 				<div id="PerInfo">
-					<div class="weui-grids"> <a href="javascript:void(0);" onClick="GotoStudentInfo()" class="weui-grid"> 
+					<div class="weui-grids"> <a href="javascript:void(0);" onClick="PageSlide($('#StudentInfo'),$('#Personal'),1);$('#SIContent').animate({scrollTop: 0}, 'fast');" class="weui-grid"> 
 						<!-- 图标 -->
 						<div class="weui-grid__icon"> <img src="resource/xj.png" alt=""> </div>
 						<!-- 标签文字 -->
-						<p class="weui-grid__label">学籍</p>
-						</a> <a href="#" class="weui-grid"> 
+						<p class="weui-grid__label">个人信息</p>
+						</a> <a href="javascript:void(0);" class="weui-grid"> 
 						<!-- 图标 -->
 						<div class="weui-grid__icon"> <img src="resource/xk.png" alt=""><span class="weui-badge" style="position: absolute;top: 10px;right: 27px;">New</span> </div>
 						<!-- 标签文字 -->
@@ -180,23 +180,169 @@
 						<!-- 标签文字 -->
 						<p class="weui-grid__label">设置</p>
 						</a> </div>
-					<div class="weui-btn-area"><a href="javascript:void(0);" onclick="Login()" class="weui-btn weui-btn_warn">退出系统</a></div>
+					<div class="weui-btn-area"><a href="javascript:void(0);" onclick="" class="weui-btn weui-btn_warn">退出系统</a></div>
+					<div class="weui-loadmore weui-loadmore_line weui-loadmore_dot"><span class="weui-loadmore__tips"></span></div>
 					<div class="weui-footer">
 						<p class="weui-footer__links"> <a href="https://mattholy.github.io" class="weui-footer__link">开发者网站</a> </p>
 						<p class="weui-footer__text">Copyright © 2016 Mattholy</p>
 					</div>
 				</div>
 			</div>
-			<!--学籍信息-->
+			<!--个人信息-->
 			<div id="StudentInfo" class="InnerPage">
 				<div id="TopBar" class="TopBar">
-					<div class="Title">学籍信息</div><div class="GoBack" onClick="GoBack()"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
+					<div class="Title" onClick="$('#SIContent').animate({scrollTop: 0}, 'fast');">个人信息</div>
+					<div class="GoBack" onClick="PageSlide($('#StudentInfo'),$('#Personal'),2)"><i class="fa fa-chevron-left" aria-hidden="true"></i></div>
 				</div>
+				<div class="ContentHolder" id="SIContent">
+					<div class="TopBarHolder"></div>
+					<div class="weui-cells__title">基本信息</div>
+					<div class="weui-cells">
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>姓名</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>性别</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>身份证号</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>出生日期</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>籍贯</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+					</div>
+					<div class="weui-cells__title">学籍信息</div>
+					<div class="weui-cells">
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>学号</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>学院</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>专业</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>班级</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>考生号</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>入学日期</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>毕业日期</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>政治面貌</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>生源地</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>学习形式</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>培养层次</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>入学方式</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>外语语种</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+					</div>
+					<div class="weui-cells__title">家庭信息</div>
+					<div class="weui-cells">
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>联系电话</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						<div class="weui-cell">
+							<div class="weui-cell__bd">
+								<p>家庭邮编</p>
+							</div>
+							<div class="weui-cell__ft">说明文字</div>
+						</div>
+						 <div class="weui-media-box weui-media-box_text">
+						 <h4 class="weui-media-box__title">家庭地址</h4>
+						 <p class="weui-media-box__desc">123123123</p>
+						 </div>
+					</div>
+					<div class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+					<span class="weui-loadmore__tips" style="background-color:#fbf9fe;"></span>
+					</div>
+					<div class="weui-footer">
+						<p class="weui-footer__links"> <a href="https://mattholy.github.io" class="weui-footer__link">开发者网站</a> </p>
+						<p class="weui-footer__text">Copyright © 2016 Mattholy</p>
+					</div>
+				</div>
+				
 			</div>
+			
+			
+<!--手机页面结尾-->
 		</div>
-		
-		
-		
 		<div id="PhoneButton" class="PhoneButton" onclick="SetupPhone()">移动端界面演示<br>
 			点击开始</div>
 	</div>

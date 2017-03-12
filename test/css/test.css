@@ -115,7 +115,7 @@ h2 {
 	width:0px;
 	background-color:#fbf9fe;
 	text-align:left;
-	overflow-x:hidden;
+	overflow:hidden;
 	-webkit-transition-property:all;
 	transition-property:all;
 	-webkit-transition-duration: 1s;

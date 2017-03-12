@@ -16,8 +16,6 @@ function SetupDesktop() {
 
 
 //下面是手机端的js
-var ThisPage="1";
-
 function SetupPhone() {
 	$("#SelectPhone").css('width', '100%');
 	$("#PhoneImg").css('width', '450px');
@@ -34,9 +32,7 @@ function SetupPhoneDelay() {
 	$("#RightSlogan").show();
 	$("#PhoneMain").css('width', '372px');
 	$("#PhoneMain").css('height', '636px');
-	$('html,body').animate({
-		scrollTop: 100
-	}, 'slow');
+	$('html,body').animate({scrollTop: 100}, 'slow');
 	setTimeout("SloganDelay()", 1000);
 }
 
@@ -86,20 +82,24 @@ function Login() {
 function Loged() {
 	$("#loginToast").hide();
 	$("#logedToast").show();
-	setTimeout("GotoPersonal()", 500);
+	setTimeout("Loged2()",500);
 }
 
-function GotoPersonal() {
-	$("#LoginSheet").addClass("SlideLeft");
-	$("#Personal").show();
-	$("#Personal").addClass("SlideLeft");
+function Loged2(){
+	$("#logedToast").hide();
+	PageSlide($("#LoginSheet"),$("#Personal"),1);
 }
 
-function GotoStudentInfo(){
-	$("#StudentInfo").addClass("SlideLeft");
-	ThisPage = "#GoStudentInfo";
+/*页面滚动效果*/
+function PageSlide(PageA,PageB,Direction) {//1=left;2=right
+	if (Direction==1){
+		PageA.animate({left:'-=372px'},50);
+		PageB.animate({left:'-=372px'},50);
+	}
+	else {
+		PageA.animate({left:'+=372px'},50);
+		PageB.animate({left:'+=372px'},50);
+	}
 }
 
-function GoBack(){
-	$("#StudentInfo").removeClass("SlideLeft");
-}
+/*页面切换*/

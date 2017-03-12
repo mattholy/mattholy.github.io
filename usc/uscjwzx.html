@@ -22,9 +22,9 @@
 <div>
   <input id="UserName"  type="text" pattern="[0-9]{11}" placeholder="请输入学号">
   <input id="Password" type="password" placeholder="请输入密码">
-  <input id="Code"  type="text" pattern="[A-z]{4}" placeholder="请输入验证码">
-  <span><img id="codeImg" alt="刷新验证码！" style="margin-bottom: -8px; cursor: pointer;" src="http://61.187.179.73/Core/verify_code.ashx" onclick="this.src=this.src+'?'" /></span>
-  <button type="button" onclick="logindatasend()">测试输入值</button>
+  <input id="ValidateCode"  type="text" pattern="[A-z]{4}" placeholder="请输入验证码">
+  <span><img id="codeImg" alt="刷新验证码！" style="margin-bottom: -8px; cursor: pointer;" src="http://jwzx.usc.edu.cn/Core/verify_code.ashx" onclick="this.src=this.src+'?'" /></span>
+  <button type="button" onclick="LoginSys()">测试输入值</button>
   <span id="mess"></span>
 </div>
 </body>
