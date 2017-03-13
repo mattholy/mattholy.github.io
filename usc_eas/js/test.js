@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	$("html").niceScroll();
+	wx.hideOptionMenu();
 });
 
 var Journey=$(window).width();

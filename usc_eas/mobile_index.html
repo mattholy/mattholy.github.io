@@ -4,13 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 <meta name="author" content="Mattholy|甘元浩"/>
+<meta name="apple-mobile-web-app-capable" content="yes" />
 <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
 <script src="js/test.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
-<title>南华教务在线移动端</title>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<title>南华大学教务在线移动端</title>
 <link href="https://res.wx.qq.com/open/libs/weui/1.1.1/weui.min.css" rel="stylesheet" type="text/css">
 <link href="css/phone.css" rel="stylesheet" type="text/css">
 <link href="resource/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -164,7 +166,7 @@
 			<!-- 标签文字 -->
 			<p class="weui-grid__label">设置</p>
 			</a> </div>
-		<div class="weui-btn-area"><a href="javascript:void(0);" onclick="" class="weui-btn weui-btn_warn">退出系统</a></div>
+		<div class="weui-btn-area"><a href="javascript:void(0);" onclick="wx.closeWindow();" class="weui-btn weui-btn_warn">退出系统</a></div>
 		<div class="weui-loadmore weui-loadmore_line weui-loadmore_dot"><span class="weui-loadmore__tips"></span></div>
 		<div class="weui-footer">
 			<p class="weui-footer__links"> <a href="https://mattholy.github.io" class="weui-footer__link">开发者网站</a> </p>
