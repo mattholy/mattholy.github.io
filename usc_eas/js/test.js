@@ -63,12 +63,12 @@ RightWay.left='+='+Journey+'px';
 
 function PageSlide(PageA,PageB,Direction) {//1=left;2=right
 	if (Direction==1){
-		PageA.animate(LeftWay,50);
-		PageB.animate(LeftWay,50);
+		PageA.animate(LeftWay,100);
+		PageB.animate(LeftWay,100);
 	}
 	else {
-		PageA.animate(RightWay,50);
-		PageB.animate(RightWay,50);
+		PageA.animate(RightWay,100);
+		PageB.animate(RightWay,100);
 	}
 }
 
