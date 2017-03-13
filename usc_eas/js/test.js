@@ -1,41 +1,8 @@
 $(document).ready(function () {
 	$("html").niceScroll();
-	$("#PhoneMain").hide();
-	alert('由于在登录教务在线的方面取得突破性进展，这个DEMO实际已停止开发，转为正式项目，详见我的Github');
 });
 
-function SloganDelay() {
-	$("#LeftSlogan").css('color', '#000000');
-	$("#RightSlogan").css('color', '#000000');
-}
-
-function SetupDesktop() {
-	$("#SelectDesktop").css('width', '100%');
-	$("#SelectPhone").hide();
-}
-
-
-
-//下面是手机端的js
-function SetupPhone() {
-	$("#SelectPhone").css('width', '100%');
-	$("#PhoneImg").css('width', '450px');
-	$("#PhoneImg").css('top', '30px');
-	//$("#PhoneImg").css('transform','translate(-100%,0px)');
-	$("#SelectDesktop").hide();
-	$("#PhoneButton").hide();
-	setTimeout("SetupPhoneDelay()", 1000);
-}
-
-function SetupPhoneDelay() {
-	$("#PhoneMain").show();
-	$("#LeftSlogan").show();
-	$("#RightSlogan").show();
-	$("#PhoneMain").css('width', '372px');
-	$("#PhoneMain").css('height', '636px');
-	$('html,body').animate({scrollTop: 100}, 'slow');
-	setTimeout("SloganDelay()", 1000);
-}
+var Journey=$(window).width();
 
 function ShowAgreement() {
 	$("#Dialog1Title").html("用户协议");
@@ -70,11 +37,7 @@ function Login() {
 			$("#tyxy").css("background", "red");
 		});
 	} else {
-		$("#LeftSlogan").hide();
-		$("#RightSlogan").hide();
 		$("#loginToast").show();
-		$("#PhoneMain").css('transform', 'translateX(-450px)');
-		$("#PhoneImg").css('transform', 'translateX(-450px)');
 		setTimeout("Loged()", 3000);
 		$("#NameTitle").html($("#UserName").val());
 	}
@@ -88,18 +51,24 @@ function Loged() {
 
 function Loged2(){
 	$("#logedToast").hide();
+	$("#Personal").show();
 	PageSlide($("#LoginSheet"),$("#Personal"),1);
 }
 
 /*页面滚动效果*/
+var LeftWay={};
+var RightWay={};
+LeftWay.left='-='+Journey+'px';
+RightWay.left='+='+Journey+'px';
+
 function PageSlide(PageA,PageB,Direction) {//1=left;2=right
 	if (Direction==1){
-		PageA.animate({left:'-=372px'},50);
-		PageB.animate({left:'-=372px'},50);
+		PageA.animate(LeftWay,50);
+		PageB.animate(LeftWay,50);
 	}
 	else {
-		PageA.animate({left:'+=372px'},50);
-		PageB.animate({left:'+=372px'},50);
+		PageA.animate(RightWay,50);
+		PageB.animate(RightWay,50);
 	}
 }
 

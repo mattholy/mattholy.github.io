@@ -1,0 +1,13 @@
+@font-face{
+    font-family: 'HanShaoJiehandanti';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: /*
+		url('../font/SourceCodePro-Regular.eot') format('embedded-opentype'),
+		url('../font/SourceCodePro-Regular.ttf.woff2') format('woff2'),
+		url('../font/SourceCodePro-Regular.otf.woff') format('woff'),
+		url('../font/SourceCodePro-Regular.otf') format('opentype'),
+		*/
+		url('../resource/font/HanShaoJiehandanti.ttf') format('truetype');
+}
