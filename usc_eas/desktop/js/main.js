@@ -22,8 +22,8 @@ $(document).mousemove(function(e) {
 	windowCenter.y = $(document).height()/2;
 	mouseRelPos.x = mousePos.x - windowCenter.x;
 	mouseRelPos.y = windowCenter.y - mousePos.y;
-	xDeg = -(Math.atan2(mouseRelPos.x,1000))*4*Math.PI;
-	yDeg = -(Math.atan2(mouseRelPos.y,1000))*4*Math.PI;
+	xDeg = -(Math.atan2(mouseRelPos.x,1000))*3*Math.PI;
+	yDeg = -(Math.atan2(mouseRelPos.y,1000))*5*Math.PI;
 	var resualtDeg={};
 	resualtDeg='rotateY('+xDeg+'deg) rotateX('+yDeg+'deg)';
 	$('#loginSheet').css("transform",resualtDeg);
