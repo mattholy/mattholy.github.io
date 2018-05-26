@@ -1590,8 +1590,8 @@
 		}
 
 	strong, b {
-		color: #787878;
-		font-weight: 400;
+		color: #000000;
+		font-weight: 500;
 	}
 
 	em, i {
@@ -2294,7 +2294,7 @@
 		}
 
 			table.alt tbody tr td {
-				border: solid 2px #efefef;
+				border: solid 1px #efefef;
 				border-left-width: 0;
 				border-top-width: 0;
 			}
@@ -2480,17 +2480,17 @@
 		-ms-justify-content: space-between;
 		justify-content: space-between;
 		background-color: #1f1815;
-		background-attachment: scroll,								fixed;
+		background-attachment: scroll,fixed;
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-		background-position: top left,							top left;
-		background-repeat: repeat,								no-repeat;
-		background-size: auto,								auto 100%;
+		background-position: center,center;
+		background-repeat: repeat,no-repeat;
+		background-size: auto,auto;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
 		position: fixed;
-		text-align: right;
+		text-align: center;
 		top: 0;
 		width: 30%;
 	}
@@ -2533,7 +2533,7 @@
 		}
 @media screen and (min-width: 980px) {
 	#header .image.avatar {
-		margin: 0 calc(50% - 4em) 1em 0;
+		margin: 0 0 1em 0;
 		width: 8em;
 	}
 	#footer {
