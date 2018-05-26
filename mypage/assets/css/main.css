@@ -2484,7 +2484,7 @@
 		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
 		background-position: center,center;
 		background-repeat: repeat,no-repeat;
-		background-size: auto,auto;
+		background-size: auto,auto 150%;
 		color: rgba(255, 255, 255, 0.5);
 		height: 100%;
 		left: 0;
